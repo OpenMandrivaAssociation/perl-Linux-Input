@@ -22,7 +22,7 @@ buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
 buildarch: noarch
 prefix:    %(echo %{_prefix})
 source:    http://search.cpan.org//CPAN/authors/id/B/BE/BEPPU/Linux-Input-1.03.tar.gz
-BuildRequires:	perl-Module-Build
+BuildRequires:	perl-Module-Build perl-Linux-Joystick perl-Class-Data-Inheritable
 
 %description
 None.

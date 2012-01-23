@@ -14,11 +14,9 @@
 name:      perl-Linux-Input
 summary:   Linux-Input - Perl module
 version:   1.03
-release:   1
-vendor:    beppu@cpan.org
-packager:  Arix International <cpan2rpm@arix.com>
+release:   2
 license:   Artistic
-group:     Applications/CPAN
+group:     Development/Perl
 url:       http://www.cpan.org
 buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
 buildarch: noarch
@@ -57,15 +55,6 @@ grep -v '.bak$' |xargs --no-run-if-empty \
 cmd=/usr/share/spec-helper/compress_files
 [ -x $cmd ] || cmd=/usr/lib/rpm/brp-compress
 [ -x $cmd ] && $cmd
-
-# SuSE Linux
-if [ -e /etc/SuSE-release -o -e /etc/UnitedLinux-release ]
-then
-    %{__mkdir_p} %{buildroot}/var/adm/perl-modules
-    %{__cat} `find %{buildroot} -name "perllocal.pod"`  \
-        | %{__sed} -e s+%{buildroot}++g                 \
-        > %{buildroot}/var/adm/perl-modules/%{name}
-fi
 
 # remove special files
 find %{buildroot} -name "perllocal.pod" \

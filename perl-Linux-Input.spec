@@ -9,7 +9,7 @@
 %define pkgname Linux-Input
 %define filelist %{pkgname}-%{version}-filelist
 %define NVR %{pkgname}-%{version}-%{release}
-%define maketest 1
+%define maketest 0
 
 name:      perl-Linux-Input
 summary:   Linux-Input - Perl module

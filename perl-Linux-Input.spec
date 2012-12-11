@@ -9,7 +9,7 @@
 %define pkgname Linux-Input
 %define filelist %{pkgname}-%{version}-filelist
 %define NVR %{pkgname}-%{version}-%{release}
-%define maketest 0
+%define maketest 1
 
 name:      perl-Linux-Input
 summary:   Linux-Input - Perl module
@@ -107,3 +107,16 @@ find %{buildroot}%{_prefix}             \
 
 %files -f %filelist
 
+
+
+%changelog
+* Mon Jan 23 2012 Александр Казанцев <kazancas@mandriva.org> 1.03-2
++ Revision: 767081
+-Add to BR perl-Linux-Joystick and perl-Class-Data-Inheritable
+- fix spec for Mandriva rules
+- imported package perl-Linux-Input
+- imported package perl-Linux-Input
+
+
+* Thu Aug 25 2011 root@localhost.localdomain
+- Initial build.

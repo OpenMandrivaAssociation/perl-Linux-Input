@@ -17,7 +17,7 @@ version:   1.03
 release:   2
 license:   Artistic
 group:     Development/Perl
-url:       http://www.cpan.org
+url:       https://www.cpan.org
 buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
 buildarch: noarch
 prefix:    %(echo %{_prefix})
